@@ -1,21 +1,15 @@
 # cell-counting-imager
+This is the software that runs the Cell Counting Imager, an imaging based automated cell counting instrument used with the Automated Cell Culture Splitter (ACCS). The release of this software accompanies the 2024 article "Open-source cell culture automation system with integrated cell counting for passaging microplate cultures". Refer to the article for more context.
 
-This is the software that runs the Cell Counting Imager, an imaging based automated cell counting instrument used with the Automated Cell Culture Splitter (ACCS).
+Links to the preprint and other Automated Cell Culture Splitter software components and documentation can be found on the [main repository](https://github.com/czbiohub-sf/2024-accs-pub).
 
 ## Requirements
-- Cell Counting Imager instrument
-- Python 3.12
-- `scikit-image` 0.24
-- `matplotlib` 3.9
-- `pyserial` 3.5
-- `pypylon` 4.1
-- `ticlib` 0.2.2
+Refer to `pyproject.toml` for Python dependencies.
 
 ## Installation
 The CCI software should be installed in a dedicated Python virtual environment. The exact procedure for doing so depends on which tools are popular this week, but for example:
 ```
-cd /place/where/you/downloaded/cell-counting-imager/
-pipx install .
+pipx git+https://github.com/czbiohub-sf/accs-cell-counting-imager-pub.git@main
 ```
 After installing the package, run `cci_config` to initialize the local configuration file if this is a new setup.
 
@@ -58,7 +52,7 @@ Camera:
 ```
 
 
-- `cci_run` is the program responsible for normal functionality of the instrument.
+`cci_run` is the program responsible for primary functionality of the instrument.
 ```
 usage: cci_run [-h] [--config {cci1,cci25_sim,cci25}] [--local-config PATH] [--output-dir PATH] [--debug] [--console]
                [--load-bg PATH_LIST] [--recover]
@@ -79,5 +73,3 @@ options:
 ## Maintainers
 This repository is currently maintained by [Greg Courville](mailto:greg.courville@czbiohub.org) of the Bioengineering Platform at Chan Zuckerberg Biohub San Francisco.
 
-## See also
-The release of this software accompanies the 2024 article "Open-source cell culture automation system with integrated cell counting for passaging microplate cultures". Links to the preprint and other Automated Cell Culture Splitter software components and documentation can be found on the [main repository](https://github.com/czbiohub-sf/2024-accs-pub).
