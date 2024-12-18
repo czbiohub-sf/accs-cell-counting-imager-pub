@@ -1,0 +1,16 @@
+{
+    "system_config": "cci25",
+    "hardware_params": {
+        "serial_port": "COM42",
+        "lane_positions": [
+            ["A", 8572],
+            ["B", 7361],
+            ["C", 6150],
+            ["D", 4940],
+            ["E", 3725],
+            ["F", 2525],
+            ["G", 1328],
+            ["H",  117]
+            ]
+        }
+    }

@@ -1,0 +1,44 @@
+{
+    "system_config": "common",
+    "hardware_class": "Cci25Hardware",
+    "cell_counter_class": "Cci2CellCounter",
+    "hardware_params": {
+        "exposure_ms": 80.0,
+        "binning_factor": 2,
+        "settling_time_s": 3.0,
+        "homing_timeout_s": 20.0
+        },
+    "preprocessing_params": {
+        "input_scale_factor": 0.5,
+        "fid_roi_width": 0.2,
+        "fid_roi_height": 0.75,
+        "fid_roi_ctr_x": 0.15,
+        "fid_roi_ctr_y": 0.5,
+        "fid_brt_thresh": 0.35,
+        "align_upsample_factor": 10.0,
+        "align_overlap_ratio": 0.8,
+        "margin": 0.07,
+        "corner_zone_radius": 0.62,
+        "cleanup_bg_brt_thresh": 0.44,
+        "cleanup_bg_grow_factor": 7.5e-3,
+        "cleanup_fg_brt_thresh": 0.1,
+        "cleanup_fg_size_thresh": 5.0e-4,
+        "cleanup_fg_grow_factor": 7.5e-3,
+        "cleanup_fg_grow_cycles": 4,
+        "cleanup_gaussian_sigma": 5.0,
+        "cleanup_use_anticounting": true,
+        "cleanup_anticounting_y_offs": 7.0,
+        "cleanup_anticounting_excl_w": 10,
+        "cleanup_anticounting_excl_h": 14
+        },
+    "counting_params": {
+        "volume_per_px": 1.79e-09,
+        "kernel_disk_radius": 20,
+        "peak_thresh": 0.25,
+        "peak_min_dist": 5,
+        "blob_area_max": 100,
+        "blob_flood_tol": 0.5,
+        "kernel_padding_ratio": 0.3,
+        "kernel_downsample_factor": 4
+        }
+    }

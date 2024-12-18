@@ -1,0 +1,6 @@
+/cell_counting_imager/_version.py
+/*.egg-info/
+/build/
+/.eggs/
+*.pyc
+

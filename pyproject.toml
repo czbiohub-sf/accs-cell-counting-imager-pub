@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cell-counting-imager"
+description = "Control and image processing software that powers the ACCS Cell Counting Imager"
+requires-python = "~=3.12.0"
+license = { file = "LICENSE" }
+authors = [
+  {name = "Greg Courville", email = "greg.courville@czbiohub.org"},
+  {name = "Paul Lebel", email = "paul.lebel@czbiohub.org"},
+  ]
+maintainers = [{name = "Greg Courville", email = "greg.courville@czbiohub.org"}]
+dependencies = [
+  "scikit-image~=0.24.0",
+  "matplotlib~=3.9.0",
+  "pyserial~=3.5.0",
+  "pypylon~=4.1.0",
+  "aiohttp~=3.11.0",
+  "ticlib==0.2.2",
+  ]
+dynamic = ["version"]
+
+[project.scripts]
+cci_run = "cell_counting_imager.cli.cci_run:main"
+cci_test = "cell_counting_imager.cli.cci_test:main"
+cci_config = "cell_counting_imager.cli.cci_config:main"
+
+[tool.setuptools]
+packages = [
+  "cell_counting_imager",
+  "cell_counting_imager.cli",
+  "cell_counting_imager.hw_control",
+  "cell_counting_imager.image_processing",
+  ]
+
+[tool.setuptools.package-data]
+cell_counting_imager = [
+  "configs/*.json",
+  ]
+
+[tool.setuptools_scm]
+write_to = "cell_counting_imager/_version.py"

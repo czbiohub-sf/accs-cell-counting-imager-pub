@@ -1,0 +1,7 @@
+{
+    "server_params": {
+        "api_mode": "legacy",
+        "bind_port": 43434,
+        "bind_addr": "0.0.0.0"
+        }
+    }

@@ -1,0 +1,17 @@
+[MAIN]
+source-roots=.
+
+[MESSAGES CONTROL]
+disable=logging-fstring-interpolation,
+	    missing-function-docstring,
+	    missing-class-docstring,
+	    missing-module-docstring,
+	    too-many-arguments,
+	    too-many-positional-arguments,
+	    too-many-locals,
+	    too-many-statements,
+	    too-many-branches,
+	    too-many-return-statements,
+	    too-few-public-methods,
+	    too-many-instance-attributes,
+	    logging-too-many-args

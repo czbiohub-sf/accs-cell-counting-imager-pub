@@ -1,0 +1,32 @@
+{
+"_TRANSITIONS": {
+	"INITIALIZING": ["IDLE", "ERROR"], 
+	"ERROR": ["IDLE"], 
+	"IDLE": ["PREVIEW", "SCAN", "SHUT DOWN", "ERROR"], 
+	"PREVIEW": ["IDLE", "ERROR"], 
+	"SCAN": ["IDLE", "ERROR"], 
+	"SHUT DOWN": []}, 
+
+"_STATES": ["INITIALIZING", "IDLE", "PREVIEW", "SCAN", "SHUT DOWN", "ERROR"], 
+
+"_ACTIONS": ["Enter Preview", "Start Scan", "Set Positions", "Move Stage", "Create Server"], 
+
+"_STATE_PERMISSIONS": {"INITIALIZING": [], 
+							"ERROR": [], 
+							"IDLE": ["Enter Preview","Start Scan","Set Positions","Move Stage","Create Server"], 
+							"PREVIEW": ["Set Positions","Move Stage"], 
+							"SCAN": [], 
+							"SHUT DOWN": []}, 
+
+"_MIN_CELL_AREA": 10, 
+"_MAX_CELL_AREA": 500,
+"_HIGHPASS_PIXELS": 20,
+"_LOWPASS_PIXELS": 2,
+"_IMAGE_DOWNSAMPLE": 2,
+"_IMAGE_XCROP": 500,
+"_IMAGE_YCROP": 300,
+"_IMG_PERCENTILE_HIGH": 99.9,
+"_IMG_PERCENTILE_LOW": 0.1,
+"_MIN_CELL_SPACING": 3,
+"_IMAGING_VOLUME": 1.043
+}

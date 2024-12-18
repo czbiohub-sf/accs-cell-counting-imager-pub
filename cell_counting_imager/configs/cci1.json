@@ -1,0 +1,36 @@
+{
+    "hardware_class": "Cci1Hardware",
+    "cell_counter_class": "Cci1CellCounter",
+    "preprocessing_params": {
+        "input_rescale_factor":   0.5,
+        "input_gaussian_sigma":   1.0,
+        "align_bg_pixel_thresh":  0.275,
+        "align_wall_extent_max":  0.2,
+        "align_bg_row_thresh":    0.35,
+        "align_mask_margin":      0.0,
+        "align_cutout_height":    0.6,
+        "align_mpcc_overlap_ratio": 0.2,
+        "align_oversub_factor":   1.03,
+        "crop_roi_size":          [750, 750],
+        "cleanup_wall_margin":    0.05,
+        "cleanup_bg_brt_thresh":  0.25,
+        "cleanup_bg_grow_factor": 7.5e-3,
+        "cleanup_fg_brt_thresh":  0.05,
+        "cleanup_fg_grow_factor": 6.0e-3,
+        "cleanup_fg_grow_cycles": 4,
+        "cleanup_fg_size_thresh": 2.0e-4,
+        "cleanup_gaussian_sigma": 3.0
+        },
+    "counting_params": {
+        "roi_volume_ml": 1.1193e-03,
+        "corner_zone_radius": 0.575,
+        "margin": 0.04,
+        "kernel_disk_radius": 6,
+        "kernel_padding": 15,
+        "kernel_downsample_factor": 2,
+        "blobdog_threshold": 0.17,
+        "blobdog_overlap": 0.1,
+        "blobdog_sigma": 2.0,
+        "blobdog_sigma_ratio": 1.5
+        }
+    }
