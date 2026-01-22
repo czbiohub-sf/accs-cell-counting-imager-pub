@@ -71,5 +71,5 @@ options:
 
 
 ## Maintainers
-This repository is currently maintained by Greg Courville([:email:](mailto:greg.courville@czbiohub.org)) of the Bioengineering Platform at Chan Zuckerberg Biohub San Francisco.
+This repository is currently maintained by [greg.courville@biohub.org](mailto:greg.courville@biohub.org).
 
